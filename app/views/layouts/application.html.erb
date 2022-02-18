@@ -13,12 +13,9 @@
   <body>
     <header>
       <% if user_signed_in? %>
-      <li>
-        <%= link_to "Home", home_path %>
-      </li>
-      <li>
-        <%= link_to "Books", book_path %>
-      </li>
+        <li>
+          <%= link_to "Home", home_path %>
+        </li>
         <li>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </li>
@@ -29,8 +26,10 @@
         <li>
           <%= link_to "ログイン", new_user_session_path %>
         </li>
-        <% end %>
+      <% end %>
     </header>
+    
     <%= yield %>
+    
   </body>
 </html>
