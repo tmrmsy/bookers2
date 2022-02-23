@@ -1,5 +1,1 @@
-<h2>User info</h><br />
-<%= image_tag @user.get_profile_image(100, 100) %><br />
-<span>name <%= @user.name %></span><br />
-<span>introduction <%= @user.introduction %></span><br />
-<%= link_to "User Edit", edit_user_path(params[:id]) %>
+<%= render 'books/list', user: @user %>
