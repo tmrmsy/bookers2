@@ -2,6 +2,8 @@
 
 <span><%= link_to @book.title, book_path(@book.id) %></span>
 <span><%= @book.body %></span>
-<span><%= link_to "Edit", edit_book_path(@book.id) %></span>
-<span><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？" %></span>
+<% if @book.user == current_user %>
+  <span><%= link_to "Edit", edit_book_path(@book.id) %></span>
+  <span><%= link_to "Destroy", book_path(@book.id), method: :delete %></span>
+<% end %>
 
