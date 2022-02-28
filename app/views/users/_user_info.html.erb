@@ -1,7 +1,6 @@
-<div class="col-md-3">
-  <h2>User info</h2>
-  <%= image_tag @user.get_profile_image(63, 63) %><br />
-  <span>name <%= @user.name %></span><br />
-  <span>introduction <%= @user.introduction %></span><br />
-  <%= link_to "User Edit", edit_user_path(params[:id]) %>
-</div>
+
+<h2>User info</h2>
+<%= image_tag @user.get_profile_image(63, 63) %><br />
+<span>name <%= @user.name %></span><br />
+<span>introduction <%= @user.introduction %></span><br />
+<%= link_to "User Edit", edit_user_path(current_user) %>
